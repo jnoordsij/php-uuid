@@ -64,7 +64,7 @@ final class Time implements TypeInterface
         /** @var numeric-string $microseconds */
         $microseconds = sprintf('%06s', $this->microseconds->toString());
 
-        /** @var numeric-string */
+        /** @phpstan-ignore return.type (incorrectly inferred as 'non-falsy-string') */
         return "{$this->seconds->toString()}.$microseconds";
     }
 
